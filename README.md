@@ -1,2 +1,1 @@
-# CodePracticer
-This is a practice for my own!
+Come here and push your homework!
