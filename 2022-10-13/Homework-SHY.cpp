@@ -20,11 +20,17 @@ void main() {
 }
 
 int flower(int num) {
-	int a = num / 100;
-	int b = (num - a * 100) / 10;
-	int c = num - a * 100 - b * 10;
-	int d = pow(a, 3) + pow(b, 3) + pow(c, 3);
-	if (d == num) {
+	int res = 0;
+	int remainder = 0;
+	int temp = num;
+
+	for (int i = 1; i <= 3; i++) {
+		remainder = num % 10;
+		num = num / 10;
+		res += pow(remainder, 3);
+	}
+
+	if (res == temp) {
 		return 1;
 	}
 	return 0;
